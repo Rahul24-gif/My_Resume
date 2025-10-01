@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rahul Mourya - Resume</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #1f1c2c, #928dab);
+      color: #f4f4f4;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 5px solid white;
+      margin-top: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      object-fit: cover;
+    }
+
+    .container {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 1.8rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+      transition: transform 0.4s, box-shadow 0.4s;
+      backdrop-filter: blur(8px);
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #00e5ff;
+      border-left: 5px solid #00e5ff;
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .fade-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rahul Mourya</h1>
+    <p>405/4, Sadguru Krupa Building, Kopargaon, Dombivli West - 421202</p>
+    <p>+91 9137003200 | Mouryarahul248@gmail.com</p>
+    <img src="rahul-photo.png" alt="Rahul Mourya" />
+  </header>
+  
+  <div class="container">
+    <section class="fade-on-scroll">
+      <h2>Experience</h2>
+      <p><strong>Royal International School</strong><br />Accountant (03/07/2021 - Present)</p>
+      <ul>
+        <li>Processed fees transactions with accuracy.</li>
+        <li>Coordinated with admin for salary and issues.</li>
+        <li>Handled reconciliation, vouchers, balance sheets, etc.</li>
+        <li>Managed and updated outstanding school fee data.</li>
+      </ul>
+    </section>
+    
+    <section class="fade-on-scroll">
+      <h2>Education</h2>
+      <ul>
+        <li>SSC - Maharashtra State Board (2016)</li>
+        <li>HSC - Royal Junior College (2018)</li>
+        <li>Bachelor of Financial Management - Vande Matram Degree College, 81% (2021)</li>
+        <li>Advanced Tally, GST, MS-Office, MS-CIT - Keerti Computer Institute, 83% (2019)</li>
+      </ul>
+    </section>
+
+    <section class="fade-on-scroll">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><b>Web Technologies:</b> HTML, CSS, Java</li>
+        <li><b>Productivity Suite:</b> Microsoft Excel, Word, PowerPoint</li>
+        <li><b>Hardware & Networking:</b> System troubleshooting, computer networking, router setup</li>
+        <li><b>Emerging Technologies:</b> Familiar with AI concepts and tools (e.g., ChatGPT)</li>
+      </ul>
+    </section>
+
+    <section class="fade-on-scroll">
+      <h2>Achievements & Awards</h2>
+      <ul>
+        <li>1st Rank in Financial Management (FY, SY, TY)</li>
+        <li>2nd Prize in Group Dance</li>
+        <li>1st Prize in Solo Singing</li>
+      </ul>
+    </section>
+
+    <section class="fade-on-scroll">
+      <h2>Interests</h2>
+      <ul>
+        <li><b>Continuous Learning:</b> Actively learning new skills, with a current focus on web technologies and AI tools.</li>
+        <li><b>Travel & Planning:</b> Enjoy planning travel itineraries, which enhances my organizational and research abilities.</li>
+        <li><b>Music & Creativity:</b> Exploring diverse music genres to boost focus and creative thinking.</li>
+      </ul>
+    </section>
+
+    <section class="fade-on-scroll">
+      <h2>Personal Profile</h2>
+      <ul>
+        <li>Date of Birth: 24/10/2000</li>
+        <li>Marital Status: Unmarried</li>
+        <li>Nationality: Indian</li>
+        <li>Languages: English, Hindi, Marathi</li>
+      </ul>
+    </section>
+  </div>
+  
+  <script>
+    const sections = document.querySelectorAll('.fade-on-scroll');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
